@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(53, 52, 52);
+    transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgba(255, 255, 255, 0.962);
+}
+/* header ....*/
+.top-nav{
+    width: 100%;
+    height: 50px;
+ position: fixed;
+ display: flex;
+ justify-content: space-between;
+ background-color: white;
+ z-index: 999;
+}
+.logo{
+    position: relative;
+    width: 60px;
+    top: -14px;
+    left: 30px;
+    color: white;
+}
+.sign{
+
+}
+.sign a{
+    margin-right: 15px;
+    position: relative;
+    top: 10px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.sign a:hover{
+    color: #444378;
+}
+.sign a:nth-child(2){
+    font-size: 15px;
+}
+/* header ....*/
+/*section after header*/
+.first-section{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.fa-moon{
+    margin: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.left1{
+    text-transform: capitalize;
+    padding-top: 40px;
+    color: #55549a;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.middle1{
+    margin-right: 100px; 
+    padding-top: 70px;
+}
+h1{
+     text-align: center;
+    color: #4a4884;
+    
+}
+.search-div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#search{
+    height: 5vh;
+    border: 2px solid #444378;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: large;
+   }
+.search-div #search-btn{
+   min-width: 100px;
+   height: 5vh;
+   border: #444378;
+   background-color: #4a4884;
+   color: white;
+   border-radius: 10px;
+   
+}
+/*section after header*/
+
+/*main(hostel)*/
+.main-div{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 200px;
+}
+a{
+    text-decoration: none;
+}
+.hostel-div section{
+    margin-bottom: 50px;
+    
+}
+.hostels{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 50px;
+    
+}
+.hostel-img{
+    width: 200px;
+    height: 100px;
+}
+.hostel-container{
+    width: 90%;
+}
+.divider{
+   border-bottom: 1px dashed #444378;
+}
+
+.hostel-container div{
+    margin: 10px auto;
+}
+
+/*main(hostel)*/
+/*footer*/
+#footer{
+    position: relative;
+    top: 1300px;
+z-index: 9999;
+display: flex;
+justify-content: space-between;
+}
+#copyright{
+    padding-right: 5px;
+}
+#contact{
+    font-size: 20px;
+    padding-bottom: 2px;
+}
+#contact a{
+    font-size: 25px;
+    letter-spacing: 50px;
+    padding-left: 5px;
+}
+
+/*footer*/
+
+
+/*responsiveness*/
+@media(max-width:1025px){
+    .left1{
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    #search{
+        height: 4vh;
+       }
+    .search-div #search-btn{
+       min-width: 100px;
+       height: 4vh;
+     
+       
+    }
+
+}
+@media(max-width:760px){
+    .left1{
+        letter-spacing: normal;
+        white-space: normal;
+    }
+    h1{
+        font-size: 25px;
+        text-align: center;
+       color: #4a4884;
+       
+   }
+   .middle1{
+    position: relative;
+    left: 40px;
+   }
+   .fa-moon{
+    margin: 10px;
+   }
+}
+/*responsiveness*/
