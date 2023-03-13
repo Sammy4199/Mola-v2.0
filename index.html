@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assest/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <title>MOLA</title>
 </head>
 <body>
@@ -14,8 +14,8 @@
             <img src="assest/images/mola v2.svg" alt="logo" loading="lazy" class="logo">
         </div>
         <div class="sign">
-            <a href="#">Have access already? Sign in</a> 
-            <a href="#">Sign up</a>
+            <a href="#" onclick="document.getElementById('form1').style.display = 'block' ">Have access already? Sign in</a> 
+            <a href="#" onclick="document.getElementById('form2').style.display = 'block' " >Sign up</a>
         </div>
     </nav>
     <header class="first-section">
@@ -31,9 +31,59 @@
        </div> 
     </div>
     <div class="modeselector">
-        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-moon" onclick="darkMode('dark')"></i>
     </div>
-    </header>  
+    </header> 
+    <a href="" class="water-mark">
+		  <div class="brand">SAM's</div>
+		  <div class="made-with">Made with<strong> Samscom</strong></div>
+	  </a> 
+    <div class="signin-form" id="form1">
+      <div id="signin-form">
+       <form action="">
+         <div>
+          <h1>Sign in</h1>
+          <span onclick="document.getElementById('form1').style.display='none'" class="close" title="Close Modal">&times;</span>
+         </div>
+         <div>
+          <label for="signin-email" id="email">Email:</label>
+          <input type="email" placeholder="Enter your email" class="email" id="signin-email" required>
+         </div>
+         <div>
+          <label for="signin-password" id="password">Password:</label>
+          <input type="password" placeholder="Enter password" minlength="8" class="password" id="signin-password" required>
+         </div>
+         <input type="checkbox" name="remember" id="remember">Remember <br>
+         <input type="submit" value="Sign in" class="sign-btn">
+         <div>
+           Forget<a href="#"> Password?</a>
+           Don't have account? <a href="#" onclick="document.getElementById('form2').style.display = 'block' ">Sign up</a> 
+         </div>
+       </form>
+      </div>
+     </div>
+     <div class="signup-form" id="form2">
+     <div id="signup-form">
+      <form action="">
+        <div>
+         <h1>Sign Up</h1>
+         <span onclick="document.getElementById('form2').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div>
+         <label for="signup-email" id="email">Email:</label>
+         <input type="email" placeholder="Enter your email" class="email" id="signup-email" required>
+        </div>
+        <div>
+         <label for="signup-password" id="password" >Password:</label>
+         <input type="password" placeholder="Enter password" minlength="8" class="password" id="signup-password" required>
+        </div>
+        <input type="submit" value="Sign up" class="sign-btn">
+        <div>
+          Already have account? <a href="#" onclick="document.getElementById('form1').style.display = 'block' ">Sign in</a> 
+        </div>
+      </form>
+    </div>
+    </div>
     <main>
     <div class="main-div">
     <div class="hostel-div dark1" id="dark1">
@@ -634,6 +684,7 @@
     </div>
 
   </div>
+
     </main>  
     <footer id="footer">
         <div id="contact">
@@ -653,4 +704,16 @@
         </div>
     </footer>
 </body>
+<script>
+ function darkMode(mode) {
+   
+    if (mode == "dark") {
+       var element = document.body; 
+    element.classList.toggle("dark-mode"); 
+    } else {
+      
+    }
+  }
+  formOne = document.getElementById('')
+</script>
 </html>
