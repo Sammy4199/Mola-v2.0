@@ -714,6 +714,15 @@
       
     }
   }
-  formOne = document.getElementById('')
+  formOne = document.getElementById('form1');
+  formTwo = document.getElementById('form2');
+  window.onclick = function(event){
+    if(event.target == formOne){
+      formOne.style.display = 'none';
+    }
+    else if (event.target == formTwo) {
+      formTwo.style.display = 'none';
+    } 
+  };
 </script>
 </html>
