@@ -12,12 +12,9 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgba(255, 255, 255, 0.962);
+    background-color: rgba(241, 233, 233, 0.962);
 }
 main *{
-    color: rgb(53, 52, 52);
-}
-footer *{
     color: rgb(53, 52, 52);
 }
 /* header ....*/
@@ -168,14 +165,13 @@ a{
 }
 #signin-form, #signup-form{
     width: 75%;
-    height: 300px;
+    height: 380px;
     border-radius: 20px;
     position: fixed;
     margin: auto;
     overflow: auto;
     margin-left: 10%;
     background-color: #e7e3e3;
-   
     top: 200px;
 }
 #signin-form *, #signup-form *{
@@ -201,7 +197,15 @@ a{
     color: #4e4e8b;
     font-weight: 650;
 }
-#email{
+.name_label{
+    position: relative;
+    left: -24px;
+    font-size: larger;
+    vertical-align: sub;
+    color: #4e4e8b;
+    font-weight: 650;
+}
+#email  {
      font-size: larger;
     vertical-align: sub;
     color: #4e4e8b;
@@ -209,7 +213,26 @@ a{
 }
 .email{
     position: relative;
-    left: 17px;
+    left: 27px;
+    border: 2px solid #444378;
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+    caret-color: #444378;
+}
+.firstname{
+  
+    border: 2px solid #444378;
+    outline: none;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+    caret-color: #444378;
+}
+.lastname{
+    position: relative;
+    left: 2px;
     border: 2px solid #444378;
     outline: none;
     border-radius: 10px;
@@ -218,6 +241,8 @@ a{
     caret-color: #444378;
 }
 .password{
+    position: relative;
+    left: 10px;
     border: 2px solid #444378;
     outline: none;
     border-radius: 10px;
@@ -248,6 +273,17 @@ a{
 .close:hover{
     color: #4e4e8b;
 }
+.already{
+    margin-top: 30px !important;
+}
+.signin_footer{
+    margin-top: 50px !important;
+}
+.remember{
+    float: left;
+    margin-left: 50px;
+}
+
 /*sign-form*/
 
 /*Made with*/
@@ -308,11 +344,14 @@ a{
 z-index: 99;
 display: flex;
 justify-content: space-between;
+background-color: #c2c2d6bc;
 
 }
 #copyright{
     padding-right: 5px;
     color: #4a4884;
+    float: right;
+    padding-top: 40px;
 }
 #copyright *{
     color: #4a4884;

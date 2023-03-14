@@ -14,8 +14,8 @@
             <img src="assest/images/mola v2.svg" alt="logo" loading="lazy" class="logo">
         </div>
         <div class="sign">
-            <a href="#" onclick="document.getElementById('form1').style.display = 'block' ">Have access already? Sign in</a> 
-            <a href="#" onclick="document.getElementById('form2').style.display = 'block' " >Sign up</a>
+            <a href="#" onclick="sigN('signin')">Have access already? Sign in</a> 
+            <a href="#" onclick="sigN('signup')">Sign up</a>
         </div>
     </nav>
     <header class="first-section">
@@ -53,11 +53,13 @@
           <label for="signin-password" id="password">Password:</label>
           <input type="password" placeholder="Enter password" minlength="8" class="password" id="signin-password" required>
          </div>
-         <input type="checkbox" name="remember" id="remember">Remember <br>
-         <input type="submit" value="Sign in" class="sign-btn">
-         <div>
+         <div class="remember">
+         <input type="checkbox" name="remember" id="remember">Remember 
+        </div>
+         <div class="signin_footer"><input type="submit" value="Sign in" class="sign-btn"></div>
+         <div class="signin_footer">
            Forget<a href="#"> Password?</a>
-           Don't have account? <a href="#" onclick="document.getElementById('form2').style.display = 'block' ">Sign up</a> 
+           Don't have account? <a href="#" onclick="sigN('dontHave')">Sign up</a> 
          </div>
        </form>
       </div>
@@ -69,6 +71,16 @@
          <h1>Sign Up</h1>
          <span onclick="document.getElementById('form2').style.display='none'" class="close" title="Close Modal">&times;</span>
         </div>
+        <div class="userinfo">
+        <div>
+          <label for="firstname" class="name_label">First Name:</label>
+          <input type="text" placeholder="First Name" id="firstname" class="firstname name" required>
+        </div>
+        <div>
+          <label for="lastname" class="name_label">Last Name:</label>
+          <input type="text" placeholder="Last Name" id="lastname" class="lastname name" required>
+        </div>
+        </div>
         <div>
          <label for="signup-email" id="email">Email:</label>
          <input type="email" placeholder="Enter your email" class="email" id="signup-email" required>
@@ -78,8 +90,8 @@
          <input type="password" placeholder="Enter password" minlength="8" class="password" id="signup-password" required>
         </div>
         <input type="submit" value="Sign up" class="sign-btn">
-        <div>
-          Already have account? <a href="#" onclick="document.getElementById('form1').style.display = 'block' ">Sign in</a> 
+        <div class="already">
+          Already have account? <a href="#" onclick="sigN('alreadyHave')">Sign in</a> 
         </div>
       </form>
     </div>
@@ -682,10 +694,11 @@
            </div>  
        </section>
     </div>
-
   </div>
-
     </main>  
+    <div class="checkout">
+      
+    </div>
     <footer id="footer">
         <div id="contact">
             <div>
@@ -724,5 +737,35 @@
       formTwo.style.display = 'none';
     } 
   };
+  /*   //another way to make the sign display
+  let sigN = function(sign){
+    if(sign == "signin"){
+      formOne.style.display = "block";
+    }
+    else if (sign == "signup"){
+      formTwo.style.display = "block";
+    } 
+  }; */
+function sigN(sign){
+  switch (sign) {
+    case 'signin':
+    formTwo.style.display = "none";  
+    formOne.style.display = "block";
+      break;
+    case 'signup':
+      formTwo.style.display = "block";
+      formOne.style.display = "none";
+      break;
+      case 'dontHave':
+      formTwo.style.display = "block";
+      formOne.style.display = "none";
+      break;
+      case 'alreadyHave':
+      formTwo.style.display = "none";  
+      formOne.style.display = "block";
+      break;
+  }
+}
+
 </script>
 </html>
