@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    transition: cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition:  all 0.2s ease-in-out;
 }
 :root{
     --text-shadow: .5px .5px ;
@@ -111,7 +111,6 @@ h1{
    background-color: #4a4884;
    color: white;
    border-radius: 10px;
-   
 }
 /*section after header*/
 
@@ -162,6 +161,7 @@ a{
     z-index: 9;
     position: fixed;
     top: 0;
+    
 }
 #signin-form, #signup-form{
     width: 75%;
@@ -173,7 +173,13 @@ a{
     margin-left: 10%;
     background-color: #e7e3e3;
     top: 200px;
+    box-shadow: 1px 0px 30px 0px #64649c9e;
+    animation: animatezoom 0.6s; 
 }
+ @keyframes animatezoom {
+    0% {transform: scale(0.7)} 
+    100% {transform: scale(1)}
+  }
 #signin-form *, #signup-form *{
     margin-top: 10px;
     text-shadow: .2px .2px;
@@ -214,46 +220,45 @@ a{
 .email{
     position: relative;
     left: 27px;
-    border: 2px solid #444378;
+    border: 3px solid #7877af;
     outline: none;
     border-radius: 10px;
     height: 30px;
     padding: 5px;
-    caret-color: #444378;
+    caret-color: #7877af;
 }
 .firstname{
-  
-    border: 2px solid #444378;
+    border: 3px solid #7877af;
     outline: none;
     border-radius: 10px;
     height: 30px;
     padding: 5px;
-    caret-color: #444378;
+    caret-color: #7877af;
 }
 .lastname{
     position: relative;
     left: 2px;
-    border: 2px solid #444378;
+    border: 3px solid #7877af;
     outline: none;
     border-radius: 10px;
     height: 30px;
     padding: 5px;
-    caret-color: #444378;
+    caret-color: #7877af;
 }
 .password{
     position: relative;
     left: 10px;
-    border: 2px solid #444378;
+    border: 3px solid #7877af;
     outline: none;
     border-radius: 10px;
     height: 30px;
     padding: 5px;
-    caret-color: #444378;
+    caret-color: #7877af;
 }
 .sign-btn{
     margin: auto;
     height: 30px;
-    border: 2px solid #444378;
+    border: 2px solid #7877af;
     border-radius: 10px;
     background-color: #55549a;
     color: #ffffff;
@@ -281,7 +286,11 @@ a{
 }
 .remember{
     float: left;
-    margin-left: 50px;
+    margin-left: 30%;
+    accent-color: #7877af;
+}
+input:not(.sign-btn):valid{
+    border: 3px solid #353567;
 }
 
 /*sign-form*/
@@ -352,6 +361,7 @@ background-color: #c2c2d6bc;
     color: #4a4884;
     float: right;
     padding-top: 40px;
+    cursor: pointer;
 }
 #copyright *{
     color: #4a4884;
